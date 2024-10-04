@@ -6,11 +6,11 @@ ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 
 export function FinancialOverview({ data }) {
   const chartData = {
-    labels: ['Revenue', 'Expenses', 'Cash Flow'],
+    labels: ['Revenue', 'Expenses', 'Profit'],
     datasets: [
       {
         label: 'Financial Overview',
-        data: [data.revenue, data.expenses, data.cashFlow],
+        data: [data.revenue, data.expenses, data.revenue - data.expenses],
         backgroundColor: ['rgba(75, 192, 192, 0.6)', 'rgba(255, 99, 132, 0.6)', 'rgba(54, 162, 235, 0.6)'],
       },
     ],
@@ -57,10 +57,10 @@ export function FinancialOverview({ data }) {
       </Card>
       <Card>
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-          <CardTitle className="text-sm font-medium">Cash Flow</CardTitle>
+          <CardTitle className="text-sm font-medium">Growth Rate</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="text-2xl font-bold">${data.cashFlow.toFixed(2)}</div>
+          <div className="text-2xl font-bold">{data.growthRate}%</div>
         </CardContent>
       </Card>
       <Card className="col-span-4">
