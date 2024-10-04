@@ -34,7 +34,7 @@ export default function Home() {
                 </div>
               </div>
               <Image
-                src="/Hero.svg"
+                src="/public/Hero.svg"
                 width={550}
                 height={550}
                 alt="Hero"
@@ -88,7 +88,7 @@ export default function Home() {
                 </ul>
               </div>
               <Image
-                src="/Features.svg"
+                src="/public/Features.svg"
                 width={550}
                 height={310}
                 alt="Features"
