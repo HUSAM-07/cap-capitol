@@ -20,7 +20,7 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
                   <Link
-                    href="/auth/signup"
+                    href="/dashboard"
                     className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                   >
                     Get Started
@@ -34,7 +34,7 @@ export default function Home() {
                 </div>
               </div>
               <Image
-                src="/public/Hero.svg"
+                src="/Hero.svg"
                 width={550}
                 height={550}
                 alt="Hero"
