@@ -1,7 +1,25 @@
+"use client";
+
+import { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { Howl } from "howler";
 
 export default function Home() {
+  useEffect(() => {
+    const sound = new Howl({
+      src: ["/background-music.mp3"],
+      loop: true,
+      volume: 0.5,
+      autoplay: true,
+    });
+
+    // Clean up function
+    return () => {
+      sound.stop();
+    };
+  }, []);
+
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <main className="flex-1">
